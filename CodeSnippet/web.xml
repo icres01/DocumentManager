@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<display-name>DocumentManagerWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<servlet-class>com.ibm.migration.samples.document.web.RetrieveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<url-pattern>/read.jsp</url-pattern>
+	</servlet-mapping>
+    <servlet>
+    	<display-name>Web Services Router Servlet</display-name>
+    	<servlet-name>FileManager</servlet-name>
+    	<servlet-class>com.ibm.ws.webservices.engine.transport.http.WebServicesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>FileManager</servlet-name>
+    	<url-pattern>services/FileManager</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

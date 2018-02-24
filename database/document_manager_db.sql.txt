@@ -1,0 +1,8 @@
+CREATE TABLE File (id INT not null primary key,userid VARCHAR(15),filename VARCHAR(50),timestamp VARCHAR(50)) ORGANIZE BY ROW;;
+INSERT INTO File(id, userid, filename, timestamp) VALUES(1, 'user', 'myPicture.jpg', '2014-01-01 23:03:20');
+INSERT INTO File(id, userid, filename, timestamp) VALUES(2, 'user', 'myPicture2.jpg', '2014-01-03 21:24:06');
+INSERT INTO File(id, userid, filename, timestamp) VALUES(3, 'editor', 'presentationFinal.ppt', '2014-02-03 13:23:00');
+INSERT INTO File(id, userid, filename, timestamp) VALUES(4, 'editor', 'presentationDraft.ppt', '2013-12-03 13:23:00');
+INSERT INTO File(id, userid, filename, timestamp) VALUES(5, 'editor', 'itinerary.pdf', '2013-02-03 13:23:00');
+INSERT INTO File(id, userid, filename, timestamp) VALUES(6, 'editor', 'contract.doc', '2013-02-03 13:23:00'); 
+commit;

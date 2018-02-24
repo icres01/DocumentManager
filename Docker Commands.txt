@@ -1,0 +1,20 @@
+Exercise 5 - Docker Commands
+----------------------------
+
+docker info
+
+docker pull icres01/db2ck100
+
+docker pull icres01/wasck100
+
+docker run -it -p 50000:50000 --name=db2ck100 icres01/db2ck100 db2start
+
+docker run -p 9043:9043 -p 9443:9443 --link db2ck100 --name=wasck100 icres01/wasck100
+
+docker stop wasck100
+
+docker stop db2ck100
+
+docker start -i db2ck100
+
+docker start -i wasck100
